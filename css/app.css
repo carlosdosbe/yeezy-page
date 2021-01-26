@@ -23,12 +23,14 @@ header
   justify-content: space-between;
   z-index: 100;
   padding: 30px 100px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 45px;
 }
 
 header .logo
 {
   position: relative;
-  color: #000;
+  color: #fff;
   font-weight: 700;
   font-size: 2.3em;
   text-transform: uppercase;
@@ -52,7 +54,7 @@ header ul.navigation li
 
 header ul li a
 {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -88,4 +90,97 @@ header ul li a
 .banner .imgBox img.active
 {
   opacity: 1;
+}
+
+.controls
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 80px;
+}
+
+.controls li
+{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: rgba(0,0,0,0.05);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.controls li:hover
+{
+  background: #ffeb3b;
+}
+
+.controls li::before
+{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-left: 3px solid #111;
+  border-bottom: 3px solid #111;
+  transform: rotate(45deg);
+}
+
+.controls li:nth-child(2)::before
+{
+  transform: rotate(225deg);
+}
+
+.contentBox
+{
+  position: absolute;
+  bottom: 0;
+  max-width: 700px;
+}
+
+.contentBox div
+{
+  display: none;
+}
+
+.contentBox div.active
+{
+  display: block;
+  padding: 40px;
+  padding-left: 100px;
+  border-top-right-radius: 45px;
+  background: rgba(0,0,0,0.3);
+}
+
+.contentBox div h2
+{
+  color: #fff;
+  font-size: 2.3em;
+}
+
+.contentBox div p
+{
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.contentBox div a
+{
+  color: #111;
+  font-size: 1.1em;
+  display: inline-block;
+  padding: 15px 35px;
+  background: #fff;
+  margin-top: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 45px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
